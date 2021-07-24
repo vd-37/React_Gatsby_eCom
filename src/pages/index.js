@@ -1,29 +1,60 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import HeroSection from "../components/Reusable/HeroSection"
+import Infoblock from "../components/Reusable/Infoblock"
+import DualInfoblock from "../components/Reusable/DualInfoblock"
+import Courses from "../components/Cart/Courses"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
+    <HeroSection
+      img={data.img.childImageSharp.fluid}
+      heroClass="hero-background"
+      title="LCO"
+      subTitle="LearnCodeOnline.in"
+     />
+     <Courses 
+       courses={data.courses}
+     />
+    <Infoblock heading="About Us" />
+    <DualInfoblock
+      heading="Our team"
+      img="https://img.cinemablend.com/filter:scale/quill/1/a/1/0/0/7/1a10072efd184b11f20a74c2ceb48432aa681b75.jpg?mw=600"
+      alt="Card image cap"
     />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
   </Layout>
 )
+export const query = graphql`
+  {
+    img: file(relativePath: { eq: "heromain.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    courses: allContentfulCourses(filter: {node_locale: {eq: "en-US"}}) {
+      edges {
+        node {
+          id
+          title
+          category
+          price
+          description
+          image {
+            fixed(width: 200, height: 120) {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
