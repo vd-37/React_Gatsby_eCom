@@ -16,7 +16,7 @@ export default function Card({ title, category, description, image, price, id })
                 <button className=" btn btn-warning snipcart-add-item"
   data-item-id={id}
   data-item-price={price}
-  data-item-url="https://learncodeonline.in"
+  data-item-url="https://vd-react-gatsby.netlify.app/"
   data-item-image={image}
   data-item-name={title}>Join Now</button>
             </div>
