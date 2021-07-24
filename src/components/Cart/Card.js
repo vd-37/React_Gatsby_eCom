@@ -8,7 +8,7 @@ export default function Card({ title, category, description, image, price, id })
             <div className="flex-grow-1 px-3">
                 <div className="d-flex justify-content-between">
                     <h6 className="mb-0">{title}</h6>
-                    <h6 className="mb-0 text-success ">$ {price}</h6>
+                    <h6 className="mb-0 text-success ">$$ {price}</h6>
                 </div>
                 <p className="text-muted">
                     <small>{description}</small>
@@ -23,3 +23,4 @@ export default function Card({ title, category, description, image, price, id })
         </div>
     )
 }
+ 
