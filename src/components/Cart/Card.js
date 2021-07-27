@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'gatsby'
 
 export default function Card({ title, category, description, image, price, id }) {
     return (
