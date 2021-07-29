@@ -7,6 +7,7 @@ import TeamPhotoSection from "../components/About/TeamPhotoSection"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Heading from "../components/Reusable/Heading"
 
 const AboutPage = ({ data }) => (
   <Layout>
@@ -19,9 +20,10 @@ const AboutPage = ({ data }) => (
     ></HeroSection>
     <DualInfoblock
       heading="A message from CEO"
-      img="https://i.pinimg.com/originals/f6/34/c3/f634c3c6a0fb40dd3caadeea000676be.jpg"
+      img="https://www.scarymommy.com/wp-content/uploads/2019/11/michael-scott-quotes.jpg"
       alt="Card image cap"
     />
+    <Heading title="Meet our team"/>
     <TeamPhotoSection></TeamPhotoSection>
     <Infoblock heading="About Vision" />
   </Layout>

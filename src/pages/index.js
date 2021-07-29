@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
     <Infoblock heading="About Us" />
     <DualInfoblock
       heading="Our team"
-      img="https://img.cinemablend.com/filter:scale/quill/1/a/1/0/0/7/1a10072efd184b11f20a74c2ceb48432aa681b75.jpg?mw=600"
+      img="https://nsoft.co.il/wp-content/uploads/2020/05/hitesh-choudhary-pMnw5BSZYsA-unsplash-300x200.jpg "
       alt="Card image cap"
     />
   </Layout>

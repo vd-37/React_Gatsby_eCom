@@ -34,7 +34,7 @@ export default function DualInfoblock({ heading, img, alt }) {
             <div className="card bg-dark">
               <img className="card-img-top" src={img} alt={alt} />
               <div className="card-body text-white">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title"></h5>
                 <p className="card-text ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
                   itaque maiores cupiditate? Labore nulla ipsum excepturi nihil
